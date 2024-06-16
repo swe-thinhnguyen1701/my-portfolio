@@ -1,5 +1,6 @@
 :root {
-  --background-color: #212529;
+  --primary-background-color: #212529;
+  --secondary-background-color: #292b2e;
   --font-green-color: #32de84;
   --font-white-color: #fff;
   --font-grey-color: #ccc;
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-background-color);
   font-size: 1.2rem;
   max-width: 1300px;
   color: var(--font-white-color);
@@ -26,10 +27,6 @@ body {
 
 header, main{
   margin-bottom: 20px;
-}
-
-main, footer{
-  padding: 0 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -173,7 +170,7 @@ nav .list-item:hover .link {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
 }
 
 .greeting-name{
@@ -211,10 +208,10 @@ nav .list-item:hover .link {
 
 /* LOGO */
 .logo{
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
 }
 
 .logo-img{
@@ -229,5 +226,81 @@ nav .list-item:hover .link {
 @media screen and (min-width: 1024px){
   .logo{
     margin-top: 100px;
+  }
+}
+
+/* BOX */
+.box-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  background-color: var(--secondary-background-color);
+  /* background-color: tomato; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.box:last-child{
+  margin: 0;
+}
+
+.box__icon-container{
+  border: solid var(--font-white-color) 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.box__icon{
+  font-size: 1.5rem;
+  transition: color 0.3 ease;
+}
+
+.box__content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box__content-container span:first-child{
+  font-size: 3rem;
+  color: var(--font-green-color);
+}
+
+.box__content-container span:last-child{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.box:hover {
+  .box__icon-container{
+    background-color: var(--font-green-color);
+    border-color: var(--font-green-color);
+  }
+  .box__icon{
+    color: var(--secondary-background-color);
+  }
+}
+
+@media screen and (min-width: 768px){
+  .box-container{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .box{
+    width: 45%;
+    border-radius: 10px;
   }
 }
