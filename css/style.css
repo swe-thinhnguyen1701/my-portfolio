@@ -1,140 +1,233 @@
-:root{
+:root {
   --background-color: #212529;
-  --primary-color: #32de84;
-  --secondary-color: #fff;
+  --font-green-color: #32de84;
+  --font-white-color: #fff;
+  --font-grey-color: #ccc;
   --dark-green: #1bc26c;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   background-color: var(--background-color);
   font-size: 1.2rem;
-  max-width: 1400px;
+  max-width: 1300px;
+  color: var(--font-white-color);
 }
 
-@media screen and (min-width: 1024px){
-  body{
+header, main{
+  margin-bottom: 20px;
+}
+
+main, footer{
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
     margin: 0 auto;
+    font-size: 1.34rem;
   }
 }
 
+@media screen and (min-width: 768px){
+  header, main, footer {
+    padding: 0 15px;
+  }
+
+  header{
+    margin-top: 10px;
+  }
+}
+
+.green-color{
+  color: var(--font-green-color);
+}
+
 /* LIST */
-.list{
+.list {
   margin: 0;
   padding: 0;
 }
 
-.list-inline{
+.list-inline {
   display: flex;
-  
+
 }
 
-.list-item{
+.list-item {
   list-style: none;
 }
 
-.list-inline .list-item{
+.list-inline .list-item {
   margin-right: 20px;
 }
 
-.list-inline .list-item:last-child{
+.list-inline .list-item:last-child {
   margin: 0;
 }
 
 /* LINK */
-.link{
-  color: var(--secondary-color);
+.link {
+  color: var(--font-white-color);
   text-decoration: none;
 }
 
-.link:visited{
-  color: var(--secondary-color);
+.link:visited {
+  color: var(--font-white-color);
 }
 
 /* BUTTON */
-.btn{
-   padding: 10px 20px;
-   border-radius: 10px;
-   border: 0;
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
 }
 
-.btn:hover{
+.btn:hover {
   cursor: pointer;
 }
 
-.contact-me-btn{
-  background-color: var(--primary-color);
-  color: white;
-  font-weight: bold;
+.contact-me-btn {
+  background-color: var(--font-green-color);
   transition: background-color 0.3 ease;
 }
 
-.contact-me-btn:hover{
+.contact-me-btn:hover {
   background-color: var(--dark-green);
 }
 
 /* NAV BAR */
-.nav-my-name{
+.nav-my-name {
+  font-size: 3rem;
+  font-weight: 500;
   display: none;
 }
 
-nav .contact-me-btn{
+nav .contact-me-btn {
   display: none;
 }
 
-nav{
+nav {
   padding-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--secondary-color);
+  color: var(--font-white-color);
 }
 
-nav .list-item .link{
+nav .list-item .link {
   font-size: 1.3rem;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-nav .list-item:hover .link{
-  color: var(--primary-color);
+nav .list-item:hover .link {
+  color: var(--font-green-color);
 }
 
-@media screen and (min-width: 768px){
-  nav{
+@media screen and (min-width: 768px) {
+  nav {
     justify-content: space-between;
-    padding: 15px;
   }
-  .nav-my-name{
+
+  .nav-my-name {
     display: inline-block;
-    font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--font-green-color);
   }
-  nav .contact-me-btn{
+
+  nav .contact-me-btn {
     display: inline-block;
   }
 
-  nav .link, nav .contact-me-btn{
+  nav .link,
+  nav .contact-me-btn {
     font-size: 1.4rem;
-  }  
+  }
 }
 
-@media screen and (min-width: 1024px){
-  nav .list-item .link, nav .contact-me-btn{
+@media screen and (min-width: 1024px) {
+
+  nav .list-item .link,
+  nav .contact-me-btn {
     font-size: 1.6rem;
   }
 
   nav .list-inline .list-item {
     margin-right: 30px;
+  }
+}
+
+/* GREETING */
+.greeting{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.greeting-name{
+  font-size: 1.6rem;
+}
+
+.greeting-job-position{
+  font-size: 2rem;
+  margin: 7px 0;
+}
+
+.greeting p {
+  color: var(--font-grey-color);
+}
+
+@media screen and (min-width: 768px){
+  .greeting-name{
+    font-size: 2.2rem;
+  }
+
+  .greeting-job-position{
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .greeting-name{
+    font-size: 3.2rem;
+  }
+
+  .greeting-job-position{
+    font-size: 5rem;
+  }
+}
+
+/* LOGO */
+.logo{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img{
+  height: 180px;
+  width: 180px;
+}
+
+.logo-text{
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px){
+  .logo{
+    margin-top: 100px;
   }
 }
