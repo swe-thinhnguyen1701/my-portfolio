@@ -330,10 +330,28 @@ nav .list-item:hover .link {
 }
 
 .about-me p::first-letter{
-  -webkit-initial-letter: 4;
-          initial-letter: 4;
+  /* -webkit-initial-letter: 4; */
+  initial-letter: 3;
   color: var(--font-green-color);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   margin-right: .3em;
+}
+
+@media screen and (min-width: 1024px){
+  .about-me{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-me h3{
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  .about-me p {
+    width: calc(100% - 300px);
+    font-size: 1.6rem;
+  }
 }
