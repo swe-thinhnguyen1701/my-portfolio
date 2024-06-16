@@ -1,94 +1,83 @@
 :root{
-  --primary-color: #0af89f;
-  --secondary-color: #cccbcc;
-  --background-color: #1d1b23;
+  --background-color: #212529;
+  --primary-color: #32de84;
+  --secondary-color: #fff;
+  --dark-green: #1bc26c;
 }
 
 *{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* TYPOGRAPHY */
 html{
   font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
 }
 
 body{
   background-color: var(--background-color);
-  font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: var(--secondary-color);
-}
-
-h1, h2, h3, h4, p {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-h1{
-  font-size: 2.986rem;
-}
-
-h2{
-  font-size: 2.488rem;
-}
-
-h3{
-  font-size: 2.074rem;
-}
-
-p{
-  font-weight: 500;
-}
-
-@media screen and (min-width: 768px){
-  h1{
-    font-size: 3.815rem;
-  }
-  
-  h2{
-    font-size: 2.441rem;
-  }
-  
-  h3{
-    font-size: 2.074rem;
-  }
+  max-width: 1400px;
 }
 
 @media screen and (min-width: 1024px){
   body{
-    font-size: 1.4rem;
-  }
-  h1{
-    font-size: 5.61rem;
-  }
-  
-  h2{
-    font-size: 4.209rem;
-  }
-  
-  h3{
-    font-size: 3.157rem;
+    margin: 0 auto;
   }
 }
 
-/* LINKS */
-.link{
+/* NAV BAR */
+.nav-my-name{
+  display: none;
+}
+
+nav .contact-me-btn{
+  display: none;
+}
+
+nav{
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--secondary-color);
-  font-size: 2.074rem;
+}
+
+nav .list-item .link{
+  font-size: 1.3rem;
   font-weight: bold;
-  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.link:visited{
-  color: var(--secondary-color);
-}
-
-.link:hover{
+nav .list-item:hover .link{
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px){
+  nav{
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .nav-my-name{
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--primary-color);
+  }
+  nav .contact-me-btn{
+    display: inline-block;
+  }
+
+  nav .link, nav .contact-me-btn{
+    font-size: 1.4rem;
+  }  
+}
+
+@media screen and (min-width: 1024px){
+  nav .list-item .link, nav .contact-me-btn{
+    font-size: 1.6rem;
+  }  
 }
 
 /* LIST */
@@ -97,8 +86,9 @@ p{
   padding: 0;
 }
 
-.list-inline {
+.list-inline{
   display: flex;
+  
 }
 
 .list-item{
@@ -106,40 +96,41 @@ p{
 }
 
 .list-inline .list-item{
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
-/* LOGO */
-.logo-container{
-  display: flex;
-  align-items: end;
+.list-inline .list-item:last-child{
+  margin: 0;
 }
 
-.logo__name{
-  font-size: 4rem;
-  font-weight: bold;
-  color: white;
+/* LINK */
+.link{
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
-.logo__dot{
-  width: 8px;
-  height: 8px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  margin-bottom: 13px;
-  margin-left: 5px;
+.link:visited{
+  color: var(--secondary-color);
 }
 
 /* BUTTON */
 .btn{
-  padding: 10px  15px;
-  background-color: var(--primary-color);
-  /* color: white; */
-  border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
+   padding: 10px 20px;
+   border-radius: 10px;
+   border: 0;
 }
 
 .btn:hover{
-  background-color: #08c781;
+  cursor: pointer;
+}
+
+.contact-me-btn{
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3 ease;
+}
+
+.contact-me-btn:hover{
+  background-color: var(--dark-green);
 }
