@@ -233,6 +233,7 @@ nav .list-item:hover .link {
 .box-container{
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 
 .box{
@@ -303,4 +304,36 @@ nav .list-item:hover .link {
     width: 45%;
     border-radius: 10px;
   }
+}
+
+/* SECTION */
+.section{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ABOUT ME */
+.about-me{
+  line-height: 1.6;
+}
+
+.about-me h3{
+  font-size: 3rem;
+  color: var(--font-green-color);
+  margin-bottom: 20px;
+}
+
+.about-me p{
+  font-size: 1.5rem;
+}
+
+.about-me p::first-letter{
+  -webkit-initial-letter: 4;
+          initial-letter: 4;
+  color: var(--font-green-color);
+  font-size: 4rem;
+  font-weight: 400;
+  margin-right: .3em;
 }
