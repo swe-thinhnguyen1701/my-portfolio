@@ -330,7 +330,7 @@ nav .list-item:hover .link {
 }
 
 .about-me p::first-letter{
-  /* -webkit-initial-letter: 4; */
+  -webkit-initial-letter: 3;
   initial-letter: 3;
   color: var(--font-green-color);
   font-size: 3rem;
